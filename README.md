@@ -33,3 +33,27 @@ The dataset used in this project contains various audio features for Spotify tra
 # Example usage in a Jupyter notebook:
 taylor_playlist = renamed_scaled[renamed_scaled["artist"].str.contains('Taylor Swift')]
 generate_complete_playlist(renamed, taylor_playlist, 10)
+
+## Reflection and Future Improvements
+
+While this project demonstrates how to use Spotify's audio features to build playlists and recommend similar songs, there are definitely a few things I would approach differently if I were to do it again:
+
+1. **Using More Features**:
+   - In this project, I mainly used continuous features like `danceability`, `energy`, and `tempo` to find similar songs. Next time, I’d like to explore other features beyond just the numerical ones. For example, including metadata like the **release date**, **genre**, or even **lyrics** (if available) might make the recommendations more well-rounded and interesting.
+
+2. **Trying Different Similarity Measures**:
+   - I relied on cosine similarity for this project, but I realize there are other ways to measure similarity, like **Euclidean distance** or **Jaccard similarity** (for categorical features). It would be interesting to see how these methods affect the song recommendations, and whether they bring any noticeable improvements.
+
+3. **Experimenting with Different Scaling Techniques**:
+   - I used **StandardScaler** to normalize the data, but in hindsight, it might have been worth experimenting with other scaling methods like **MinMaxScaler** or **RobustScaler**. These might handle certain outliers better, especially with features that have extreme values or are heavily skewed.
+
+4. **Using More Advanced Algorithms**:
+   - For this project, I kept things fairly simple with similarity calculations. In the future, I’d like to try some more advanced approaches, like clustering algorithms (**K-Means**, **DBSCAN**) or **collaborative filtering** techniques. These might create even more personalized or diverse playlists.
+
+5. **Improving Performance for Larger Datasets**:
+   - As the dataset grows, calculating cosine similarity for thousands of songs might start to slow things down. Next time, I’d look into ways to speed things up, like using **dimensionality reduction** (e.g., **PCA**) or **approximate nearest neighbor search** to keep the recommendation process efficient.
+
+6. **Building a User-Friendly Interface**:
+   - Right now, this project is all code-based, but down the line, I’d love to create a simple web interface or tool where users could upload their own playlists and get recommendations instantly. This would make the project more accessible and fun to use.
+
+All in all, I think this project lays a solid foundation, but there’s definitely room to make it more powerful and user-friendly in the future. These are just a few of the ideas I’d like to explore next!
