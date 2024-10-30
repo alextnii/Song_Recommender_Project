@@ -1,5 +1,6 @@
 # Song Recommender Project
-Given an input playlist, output a playlist of new song recommendations!
+Given an input playlist, output a playlist of new song recommendations! This is a project that I did a few years ago when I was first getting into data science. But I wanted to add this project now to be an example of  some of the things I worked on in my data science journey.
+
 
 ## Song Recommender Project Overview
 This project processes Spotify track data to generate feature vectors for songs and playlists. It uses a combination of audio features (like danceability, energy, and tempo) to recommend songs that are similar to a given playlist. Some key tasks include:
