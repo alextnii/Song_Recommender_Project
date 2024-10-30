@@ -9,6 +9,13 @@ This project processes Spotify track data to generate feature vectors for songs 
 - Filtering out duplicate songs when creating new playlists.
 - Verifying if specific artists or songs exist in the dataset.
 
+## The Idea and Thought Process
+In this project, I analyze Spotify track features which I use their float values to calculate a similarity between songs and playlists. Specifically, we are trying to use the power of cosine similarity, which is usually used to measure how similar two vectors (or sets of features which actually will represent a single song) are in terms of their direction as well as feature space.
+
+Clustering is an Unsupervised Learning technique used to group similar data points together. We will have each point representing a song vector in N-dimensional Euclidean space (where N represents the number of featurees). We want to essentially plot every song in our dataset in this space and find the k-number of songs that are closest in space to the vector that represents our input playlist. Note: Even though our input playlist will have multiple songs, we will aggregate it such that we can create a vector to represent the entire thing. Songs that are more similar will form clusters.
+
+We wouldn't use other techniques like regression or classification because we are not working with continuous values or have predefined categories (for classification) where we would attempt to label our clusters in this scenario.
+
 ## Dataset
 The dataset used in this project contains various audio features for Spotify tracks, such as:
 - `danceability`, `energy`, `loudness`, `speechiness`, `acousticness`, `instrumentalness`, `liveness`, `valence`, `tempo`
